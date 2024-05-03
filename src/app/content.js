@@ -1,14 +1,14 @@
 import { Fragment } from "react";
 
-import { Building2Icon, SunIcon, MapIcon, MapPinIcon } from "lucide-react";
+import { Building2Icon, SunIcon, MapIcon, MapPinIcon, CrownIcon, Globe2Icon } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
 
 import GoogleMapsEmbed from "~/components/google-maps-embed";
 import {
   convertKilogramsToTons,
   estimateWorldwideRubbish,
 } from "~/util/estimation";
+import Footer from "~/components/footer";
 
 function Content() {
   return (
@@ -28,7 +28,7 @@ function Content() {
           <h1 className="text-6xl text-center font-bold mt-10 mb-8">
             Chichen Itza
           </h1>
-          <div className="flex">
+          <div className="flex justify-center items-center flex-col">
             <Image
               className="w-full rounded-xl object-fill"
               src="/el-castillo-sunset.jpeg"
@@ -36,6 +36,9 @@ function Content() {
               width={1920}
               height={1080}
             />
+            <span className='text-sm text-zinc-400 mt-3 italic'>
+              Chichen Itza at sunset, with El Castillo in the foreground and a pink and purple sky in the background.
+            </span>
           </div>
           <main>
             <section className="mt-10">
@@ -193,21 +196,73 @@ function Content() {
           </main>
         </div>
       </div>
-      <footer className="w-screen p-5 border-t border-t-gray-200 dark:border-t-gray-800">
-        <div className="container mx-auto text-zinc-500">
-          <span className="text-sm">
-            Made w/ ❤️ by students at&nbsp;
-            <Link
-              href="https://www.ef.co.uk/ilsd/schools/manchester/"
-              target="_blank"
-              className="underline text-blue-600/80"
-            >
-              EF Manchester
-            </Link>
-            .
-          </span>
+      <div className="bg-gradient-to-b from-white dark:from-black via-zinc-300 to-black dark:to-white">
+        <section className="pt-32 container mx-auto">
+          <div className="flex flex-col justify-center items-center">
+            <Image
+              className="w-full rounded-xl object-fill shadow-xl border border-gray-800"
+              src="/man-among-rubbish-in-ghana.avif"
+              alt="A man sitting among rubbish in Ghana, with a large pile of waste in the background."
+              width={1920}
+              height={1080}
+            />
+            <span className='text-sm text-zinc-400 mt-3 italic'>
+              A man sitting among rubbish in Ghana, with a large pile of waste in the background.
+            </span>
+          </div>
+        </section>
+      </div>
+      <div className="bg-black dark:bg-white text-white dark:text-black pb-32">
+        <div className="container mx-auto">
+          <div className='flex items-center justify-center pt-36'>
+            <h2 className="text-center w-fit relative">
+              <span className="w-fit">Global Waste Generation</span>
+              <Globe2Icon size={48} className='absolute top-12 -right-14' aria-hidden='true' />
+            </h2>
+          </div>
+          <p className='text-center'>
+            Studies suggest the world produces around <span className='bg-lime-200 text-black p-1'>2.12 billion tons of municipal solid waste</span> (MSW) annually.
+          </p>
         </div>
-      </footer>
+        <div className='container mx-3 sm:mx-auto pt-5'>
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 [&_span]:text-center'>
+            <span>
+              <b>Scale of the Problem:</b><br /> The world generates a staggering amount of waste every year. Estimates suggest around 2.12 billion tons of municipal solid waste (MSW) is produced globally.
+            </span>
+            <span>
+              <b>Types of Waste:</b><br /> MSW refers to everyday household waste, but it doesn't capture the full picture. Other waste streams include electronic waste (e-waste), construction and demolition waste, and industrial waste.
+            </span>
+            <span>
+              <b>Growing Problem:</b><br /> Waste generation is expected to rise significantly in the coming decades, driven by factors like population growth and increasing consumption.
+            </span>
+          </div>
+        </div>
+        <div className="container mx-auto">
+          <div className='flex items-center justify-center pt-36'>
+            <h2 className="text-center w-fit relative">
+              <span className="w-fit">Rubbish Generation in the United Kingdom</span>
+              <CrownIcon size={48} className='absolute top-12 -right-14' aria-hidden='true' />
+            </h2>
+          </div>
+          <p className='text-center'>
+            Estimates suggest figures around <span className="bg-lime-200 text-black p-1">30.6 million tons</span> of household waste were produced in the UK in 2021.
+          </p>
+        </div>
+        <div className='container mx-3 sm:mx-auto pt-5'>
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-10 [&_span]:text-center'>
+            <span>
+              <b>National Numbers:</b><br /> While the exact daily or monthly figures for Manchester are unavailable, the UK provides some national context.
+            </span>
+            <span>
+              <b>Yearly Generation:</b><br /> In the UK, data suggests roughly 290 million tonnes of waste were produced in 2008, with household waste alone reaching almost 30 million tonnes in 2012 according to the Waste Atlas Platform.
+            </span>
+            <span>
+              <b>Waste per Capita:</b><br /> The average person in the UK throws away a little over a thousand pounds of waste per year, with variations depending on location.
+            </span>
+          </div>
+        </div>
+      </div>
+      <Footer />
     </Fragment>
   );
 }
