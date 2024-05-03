@@ -5,7 +5,7 @@ export default function GoogleMapsEmbed() {
       width={600}
       height={450}
       className="border-none rounded-xl"
-      allowFullscreen=""
+      allowFullScreen={false}
       loading="lazy"
       referrerPolicy="no-referrer-when-downgrade"
     ></iframe>

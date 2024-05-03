@@ -1,3 +1,4 @@
+import Footer from "~/components/footer";
 import { FontSans } from "~/globals/styles/fonts";
 import { cn } from "~/util/css";
 import "./globals.css";
@@ -30,7 +31,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en-GB">
-      <body className={cn(FontSans.className, "min-h-screen")}>{children}</body>
+      <body className={cn(FontSans.className, "min-h-screen")}>
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
