@@ -1,26 +1,48 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# EF Manchester - Earth Month Project ♻️
 
-## Getting Started
+This task of choosing a monument to build from recycled materials was given to all classes as April housed the Earth Day celebrations.
 
-First, run the development server:
+For this project, my classmates and I chose **Kukulcán's Pyramid** - one of the [New Seven Wonders of the World](https://www.britannica.com/list/new-seven-wonders-of-the-world).
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+![image](https://github.com/mrlemoos/ef-manchester-augmented-reality-earth-day-project-kukulcan-pyramid/assets/69330304/971f425d-c4d7-484b-9864-0da5ee654842)
+
+## Overview
+
+We're using [pnpm](https://pnpm.io) as the package manager.
+
+### Development Server
+
+To start up the development server, it's necessary to install the dependencies first (if you haven't installed it yet).
+
+```sh
+pnpm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Build and Production Server
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+To start up the production server, it is first required to build the project with the following command:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```sh
+pnpm run build
+```
 
-## Learn More
+After the build process is complete, run the production server:
+
+```sh
+pnpm run start
+```
+
+## Stack
+
+This project uses [Next.js](https://nextjs.org) as the [React](https://react.dev) Framework with [TailwindCSS](https://tailwindcss.com) as the CSS (Cascading Style Sheet) framework.
+
+As this project was a simple and small one, we decided to write it with JavaScript.
+
+## Fonts
+
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimise and load **Inter**, a custom Google Font.
+
+## Learn More about Next.js
 
 To learn more about Next.js, take a look at the following resources:
 
@@ -31,6 +53,8 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 ## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+We've deployed our application to Vercel. The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+You can access our application by clicking [here](https://ef-manchester-augmented-reality-earth-day-project-crlewkcln.vercel.app).
